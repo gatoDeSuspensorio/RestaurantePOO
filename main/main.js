@@ -10,6 +10,7 @@ import { Estoque } from './Estoque.js';
 
 class Main {
     static main() {
+        
         // Exemplo de uso
         const prato1 = new Prato(1, "Spaghetti Carbonara", "Massa com molho carbonara", 12.50);
         const prato2 = new Prato(2, "Salada Caesar", "Salada com frango, alface e molho Caesar", 9.00);
@@ -39,11 +40,11 @@ class Main {
         garcom.anotarPedido(pedido);
         garcom.registrarSaida();
 
-        // chama calcularTotal com diferentes parâmetros (sobrecarga)
-        console.log(`Total do pedido: ${pedido.calcularTotal()}`); // Usa os valores padrão: imposto = 0.10, desconto = 0.0, taxaServico = 0.0
-        console.log(`Total do pedido: ${pedido.calcularTotal(0.15)}`); // Usa um imposto de 0.15, desconto = 0.0, taxaServico = 0.0
-        console.log(`Total do pedido: ${pedido.calcularTotal(0.10, 0.05)}`); // Usa imposto de 0.10 e desconto de 0.05, taxaServico = 0.0
-        console.log(`Total do pedido: ${pedido.calcularTotal(0.10, 0.05, 0.1)}`); // Usa imposto de 0.10, desconto de 0.05, taxaServico de 0.1
+        
+        console.log(`Total do pedido: ${pedido.calcularTotal()}`); 
+        console.log(`Total do pedido: ${pedido.calcularTotal(0.15)}`);
+        console.log(`Total do pedido: ${pedido.calcularTotal(0.10, 0.05)}`); 
+        console.log(`Total do pedido: ${pedido.calcularTotal(0.10, 0.05, 0.1)}`); 
         pedido.fecharPedido();
 
         const cozinheiro = new Cozinheiro(2, "Ana", "Cozinheiro", "Manhã");
